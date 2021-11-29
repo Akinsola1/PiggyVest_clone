@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
     ));
     return  MaterialApp(
       theme: ThemeData(
+        fontFamily: 'Prompt',
+        
         scaffoldBackgroundColor: Colors.white,
       ),
         debugShowCheckedModeBanner: false,

@@ -24,7 +24,7 @@ List cardList = [
     title: 'Total Savings',
     totalAmount: '10,000',
     colour: Colors.blue.shade700,
-    IconData: MdiIcons.shield,
+    IconData: Icons.shield_outlined,
     titleColor: Colors.white,
     subtitleColor: Colors.white,
     IconColor: Colors.white,
@@ -90,7 +90,7 @@ class _homePageState extends State<homePage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
               const SizedBox(
@@ -184,6 +184,33 @@ class _homePageState extends State<homePage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                Text(
+                  'QUIZ: DO YOU NEED HELP SAVING? ',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                ),
+                const SizedBox(
+                  height: 15
+                ),
+                Container(
+                  height: size.height * .2,
+                  width: size.width,
+                  decoration: BoxDecoration(
+                    image:const  DecorationImage(
+                        image: AssetImage(
+                            'assets/images/stormseeker-rX12B5uX7QM-unsplash.jpg'), fit: BoxFit.fitWidth),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                )
+              ]),
+              const SizedBox(
+                height: 30,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                   RichText(
                     text: TextSpan(
                       children: <TextSpan>[
@@ -230,13 +257,12 @@ class _homePageState extends State<homePage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 const  Text(
+                  const Text(
                     'QUICK OPTIONS',
                     style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold
-                    ),
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 10,
@@ -257,7 +283,8 @@ class _homePageState extends State<homePage> {
                           color: Colors.grey.shade300,
                           IconData: LineIcons.percent,
                           title: 'Todays Rates',
-                          subtitle: "Check put today's rates across all savings feautures on PiggyVest",
+                          subtitle:
+                              "Check put today's rates across all savings feautures on PiggyVest",
                           trailing: 'See Rates',
                           contentColor: Colors.black),
                     ],
@@ -271,7 +298,8 @@ class _homePageState extends State<homePage> {
                           color: Colors.pink.shade100,
                           IconData: LineIcons.film,
                           title: 'Flex Naira',
-                          subtitle: 'Flexible savings for emergencies. free transfer, withdrawals etc. 8% p.a',
+                          subtitle:
+                              'Flexible savings for emergencies. free transfer, withdrawals etc. 8% p.a',
                           trailing: 'View Flex',
                           contentColor: Colors.pink.shade700),
                       const SizedBox(
@@ -279,14 +307,15 @@ class _homePageState extends State<homePage> {
                       ),
                       quick_option(
                           color: Colors.grey.shade300,
-                          IconData: LineIcons.percent,
+                          IconData: LineIcons.dollarSign,
                           title: 'Flex Dollar',
-                          subtitle: 'Save and grow your wealthy in dollars. Up to 7% p.a in dollars',
+                          subtitle:
+                              'Save and grow your wealthy in dollars. Up to 7% p.a in dollars',
                           trailing: 'Open',
                           contentColor: Colors.black),
                     ],
                   ),
-                 const SizedBox(
+                  const SizedBox(
                     height: 40,
                   )
                 ],
