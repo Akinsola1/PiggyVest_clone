@@ -33,7 +33,7 @@ class _base_screenState extends State<base_screen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
-          type: BottomNavigationBarType.shifting,
+          type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.blue.shade800,
           unselectedItemColor: Colors.grey,
           items: const[

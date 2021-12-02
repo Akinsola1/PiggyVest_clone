@@ -28,7 +28,7 @@ class savings extends StatelessWidget {
                         'Savings',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 30,
+                          fontSize: 35,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -37,6 +37,7 @@ class savings extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.blue.shade700,
                           fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         ),
                       )
                     ],

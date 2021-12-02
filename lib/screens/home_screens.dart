@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -108,13 +110,11 @@ class _homePageState extends State<homePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
                     Text(
                       'Hello, wash your hands 👋 ',
                       style: TextStyle(
                         color: Colors.grey,
+                        fontWeight: FontWeight.bold,
                       ),
                     )
                   ],

@@ -64,6 +64,9 @@ flutter:
   assets:
     - assets/images/stormseeker-rX12B5uX7QM-unsplash.jpg
     - assets/images/damir-spanic-vwaTtIhCjVg-unsplash.jpg
+    - assets/images/invest.png
+    - assets/images/key.png
+    - assets/images/padlock.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
