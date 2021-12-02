@@ -1,16 +1,8 @@
 # piggyvest_clone1
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1638140611](https://user-images.githubusercontent.com/68930312/144407197-3954a12b-117c-43e5-9edc-69c09b81d6ac.png)
+![Screenshot_1638140624](https://user-images.githubusercontent.com/68930312/144407208-62748531-8388-414e-93ec-4f3b11550e9b.png)
+![Screenshot_1638199333](https://user-images.githubusercontent.com/68930312/144407214-94772d23-0141-4902-ba6f-9d8f9d5a5f8e.png)
+![Screenshot_1638408334](https://user-images.githubusercontent.com/68930312/144407240-704633af-e48c-495c-93bc-674bff9af548.png)
+![Screenshot_1638439966](https://user-images.githubusercontent.com/68930312/144407249-e4d4b84a-1501-43f4-b2a4-1e57ddbc89c0.png)
+![Screenshot_1638439978](https://user-images.githubusercontent.com/68930312/144407259-095a2aad-a980-4885-bdd0-236fd475edd7.png)
