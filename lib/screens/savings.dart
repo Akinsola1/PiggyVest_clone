@@ -1,12 +1,66 @@
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icon.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:piggyvest_clone1/widgets/activity.dart';
 import 'package:piggyvest_clone1/widgets/quick_option.dart';
 
 class savings extends StatelessWidget {
-  const savings({Key? key}) : super(key: key);
+  List<String> items = [
+    'faruq',
+    'akins',
+    'dunlop',
+    'macbook',
+    // 'intel',
+    // 'm1',
+    // 'run'
+  ];
+  final List<Widget> _quickOption = [
+    quick_option(
+        color: Colors.pink.shade100,
+        IconData: LineIcons.film,
+        title: 'Flex Naira',
+        subtitle:
+            'Flexible savings for emergencies. Free transfer, withdrawals etc. 8% p.a',
+        trailing: '₦0.58',
+        contentColor: Colors.pink.shade700),
+    quick_option(
+        color: Colors.blue.shade100,
+        IconData: Icons.shield_outlined,
+        title: 'Piggybank',
+        subtitle:
+            'Strict savings automatically. Daily, weekly or Monthly. 10% p.a',
+        trailing: '₦10,000',
+        contentColor: Colors.blue.shade700),
+    quick_option(
+        color: Colors.blue.shade50,
+        IconData: LineIcons.lock,
+        title: 'Safelock',
+        subtitle:
+            'Lcok funnds to avoid temptations. Upfront interest. Up to 13% p.a',
+        trailing: '₦0.00',
+        contentColor: Colors.blue.shade500),
+    quick_option(
+        color: Colors.green.shade100,
+        IconData: MdiIcons.target,
+        title: 'Targets',
+        subtitle: 'Reach your unique individual saving goals. 9% p.a',
+        trailing: '₦0.00',
+        contentColor: Colors.green.shade600),
+    quick_option(
+        color: Colors.grey.shade200,
+        IconData: LineIcons.dollarSign,
+        title: 'Flex Dollar',
+        subtitle: 'Save & grow your wealth in dollars. Up to 7% p.a in dollars',
+        trailing: '\$0.00',
+        contentColor: Colors.black),
+    quick_option(
+        color: Colors.purple.shade100,
+        IconData: Icons.alternate_email_outlined,
+        title: 'Abeg Account',
+        subtitle: 'Abeg is a socila payment platform for super quick transfers',
+        trailing: 'Connect Accont',
+        contentColor: Colors.purple.shade700),
+  ];
+  savings({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -89,91 +143,24 @@ class savings extends StatelessWidget {
                       )
                     ],
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      quick_option(
-                          color: Colors.blue.shade100,
-                          IconData: Icons.shield_outlined,
-                          title: 'Piggybank',
-                          subtitle:
-                              'Strict savings automatically. Daily, weekly or Monthly. 10% p.a',
-                          trailing: '₦10,000',
-                          contentColor: Colors.blue.shade700),
-                      SizedBox(
-                        width: 7,
-                      ),
-                      quick_option(
-                          color: Colors.pink.shade100,
-                          IconData: LineIcons.film,
-                          title: 'Flex Naira',
-                          subtitle:
-                              'Flexible savings for emergencies. Free transfer, withdrawals etc. 8% p.a',
-                          trailing: '₦0.58',
-                          contentColor: Colors.pink.shade700),
-                    ],
+              GridView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio:0.7,
+                    mainAxisSpacing: 10.0,
+                    crossAxisSpacing: 10.0,
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      quick_option(
-                          color: Colors.blue.shade50,
-                          IconData: LineIcons.lock,
-                          title: 'Safelock',
-                          subtitle:
-                              'Lcok funnds to avoid temptations. Upfront interest. Up to 13% p.a',
-                          trailing: '₦0.00',
-                          contentColor: Colors.blue.shade500),
-                      SizedBox(
-                        width: 7,
-                      ),
-      
-                      quick_option(
-                          color: Colors.green.shade100,
-                          IconData: MdiIcons.target,
-                          title: 'Targets',
-                          subtitle:
-                              'Reach your unique individual saving goals. 9% p.a',
-                          trailing: '₦0.00',
-                          contentColor: Colors.green.shade600),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      quick_option(
-                          color: Colors.grey.shade200,
-                          IconData: LineIcons.dollarSign,
-                          title: 'Flex Dollar',
-                          subtitle:
-                              'Save & grow your wealth in dollars. Up to 7% p.a in dollars',
-                          trailing: '\$0.00',
-                          contentColor: Colors.black),
-                      SizedBox(
-                        width: 7,
-                      ),
-      
-                      quick_option(
-                          color: Colors.purple.shade100,
-                          IconData: Icons.alternate_email_outlined,
-                          title: 'Abeg Account',
-                          subtitle:
-                              'Abeg is a socila payment platform for super quick transfers',
-                          trailing: 'Connect Accont',
-                          contentColor: Colors.purple.shade700),
-                    ],
-                  )
-                ],
-              ),
-             const SizedBox(
+                  itemCount: _quickOption.length,
+                  itemBuilder: (context, index) {
+                    return _quickOption[index];
+                  },
+                ),
+              const SizedBox(
                 height: 40,
               )
             ],

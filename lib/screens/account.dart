@@ -13,7 +13,7 @@ class account extends StatefulWidget {
 
 class _accountState extends State<account> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
     var size = MediaQuery.of(context).size;
     bool tap = false;
     return Scaffold(

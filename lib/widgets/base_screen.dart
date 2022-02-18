@@ -18,7 +18,7 @@ class base_screen extends StatefulWidget {
 class _base_screenState extends State<base_screen> {
   // bottom navigation bar
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget> [
     homePage(),
     savings(),
     invest(),

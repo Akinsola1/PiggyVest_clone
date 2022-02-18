@@ -20,7 +20,7 @@ class _investState extends State<invest> {
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
             const SizedBox(

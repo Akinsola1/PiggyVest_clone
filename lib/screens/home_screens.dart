@@ -21,6 +21,39 @@ class homePage extends StatefulWidget {
 
 // for the carousel
 int _currentIndex = 0;
+List<Widget> _quickOption = [
+  quick_option(
+      color: Colors.orange.shade100,
+      IconData: LineIcons.mousePointer,
+      title: 'My W.E.A.C Result',
+      subtitle: 'See your 2020 W.A.E.C result',
+      trailing: 'View Result',
+      contentColor: Colors.orange),
+  quick_option(
+      color: Colors.grey.shade300,
+      IconData: LineIcons.percent,
+      title: 'Todays Rates',
+      subtitle:
+          "Check put today's rates across all savings feautures on PiggyVest",
+      trailing: 'See Rates',
+      contentColor: Colors.black),
+  quick_option(
+      color: Colors.pink.shade100,
+      IconData: LineIcons.film,
+      title: 'Flex Naira',
+      subtitle:
+          'Flexible savings for emergencies. free transfer, withdrawals etc. 8% p.a',
+      trailing: 'View Flex',
+      contentColor: Colors.pink.shade700),
+  quick_option(
+      color: Colors.grey.shade300,
+      IconData: LineIcons.dollarSign,
+      title: 'Flex Dollar',
+      subtitle:
+          'Save and grow your wealthy in dollars. Up to 7% p.a in dollars',
+      trailing: 'Open',
+      contentColor: Colors.black),
+];
 List cardList = [
   item(
     title: 'Total Savings',
@@ -76,7 +109,6 @@ List<T> map<T>(List list, Function handler) {
   return result;
 }
 
-// for the carousel
 class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
@@ -181,26 +213,23 @@ class _homePageState extends State<homePage> {
               const SizedBox(
                 height: 30,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                Text(
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                const Text(
                   'QUIZ: DO YOU NEED HELP SAVING? ',
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 14,
                   ),
                 ),
-                const SizedBox(
-                  height: 15
-                ),
+                const SizedBox(height: 15),
                 Container(
                   height: size.height * .2,
                   width: size.width,
                   decoration: BoxDecoration(
-                    image:const  DecorationImage(
+                    image: const DecorationImage(
                         image: AssetImage(
-                            'assets/images/stormseeker-rX12B5uX7QM-unsplash.jpg'), fit: BoxFit.fitWidth),
+                            'assets/images/stormseeker-rX12B5uX7QM-unsplash.jpg'),
+                        fit: BoxFit.fitWidth),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 )
@@ -254,72 +283,27 @@ class _homePageState extends State<homePage> {
               SizedBox(
                 height: 30,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'QUICK OPTIONS',
-                    style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      quick_option(
-                          color: Colors.orange.shade100,
-                          IconData: LineIcons.mousePointer,
-                          title: 'My W.E.A.C Result',
-                          subtitle: 'See your 2020 W.A.E.C result',
-                          trailing: 'View Result',
-                          contentColor: Colors.orange),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      quick_option(
-                          color: Colors.grey.shade300,
-                          IconData: LineIcons.percent,
-                          title: 'Todays Rates',
-                          subtitle:
-                              "Check put today's rates across all savings feautures on PiggyVest",
-                          trailing: 'See Rates',
-                          contentColor: Colors.black),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    children: [
-                      quick_option(
-                          color: Colors.pink.shade100,
-                          IconData: LineIcons.film,
-                          title: 'Flex Naira',
-                          subtitle:
-                              'Flexible savings for emergencies. free transfer, withdrawals etc. 8% p.a',
-                          trailing: 'View Flex',
-                          contentColor: Colors.pink.shade700),
-                      const SizedBox(
-                        width: 7,
-                      ),
-                      quick_option(
-                          color: Colors.grey.shade300,
-                          IconData: LineIcons.dollarSign,
-                          title: 'Flex Dollar',
-                          subtitle:
-                              'Save and grow your wealthy in dollars. Up to 7% p.a in dollars',
-                          trailing: 'Open',
-                          contentColor: Colors.black),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 40,
-                  )
-                ],
-              )
+              const Text(
+                'QUICK OPTIONS',
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
+              GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio:0.7,
+                  mainAxisSpacing: 10.0,
+                  crossAxisSpacing: 10.0,
+                ),
+                itemCount: _quickOption.length,
+                itemBuilder: (context, index) {
+                  return _quickOption[index];
+                },
+              ),
             ],
           ),
         ),
